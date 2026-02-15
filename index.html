@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para ti 🤍</title>
+
+<style>
+body{
+  margin:0;
+  font-family: 'Georgia', serif;
+  background:#e5e5e5;
+  color:#333;
+}
+
+.banner{
+  width:100%;
+  height:220px;
+  background:url('banner.jpg') center/cover no-repeat;
+}
+
+.container{
+  max-width:700px;
+  margin:auto;
+  padding:25px;
+}
+
+.sobre{
+  width:160px;
+  height:110px;
+  margin:30px auto;
+  background:#fff;
+  border-radius:10px;
+  position:relative;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.sobre:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(135deg, transparent 50%, #ddd 50%);
+  clip-path:polygon(0 0,100% 0,50% 50%);
+}
+
+.sobre p{
+  text-align:center;
+  padding-top:45px;
+  font-weight:bold;
+}
+
+.carta{
+  display:none;
+  background:#f7f7f7;
+  padding:25px;
+  border-radius:15px;
+  line-height:1.7;
+}
+
+.playlist{
+  margin-top:30px;
+}
+
+.playlist h3{
+  margin-bottom:10px;
+}
+
+.playlist ul{
+  padding-left:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="banner"></div>
+
+<div class="container">
+
+  <div class="sobre" onclick="abrirCarta()">
+    <p>📩 Toca el sobre</p>
+  </div>
+
+  <!-- VIDEO OCULTO (MÚSICA) -->
+  <iframe id="musica"
+    width="0" height="0"
+    src=""
+    allow="autoplay"
+  ></iframe>
+
+  <div class="carta" id="carta">
+    <p>
+La verdad no sé muy bien cómo empezar esto, pero quería decirte algo bonito hoy.
+No llevamos tanto tiempo y a veces tardo en contestar (perdón por eso 😭),
+pero aun así me gusta mucho lo que tenemos.<br><br>
+
+Nunca pensé que conocer a alguien en un team iba a terminar significando tanto
+para mí. Entre plática, risas y jugar Roblox, te fuiste volviendo alguien
+importante sin que me diera cuenta. Me gusta hablar contigo.<br><br>
+
+Perdón si a veces no soy lo que esperabas en una relación, o si no siempre estoy
+como debería. Igual, lo que siento por ti es sincero y bonito, y nace de verdad.<br><br>
+
+Este 14 no te doy algo físico, pero sí algo sincero: gracias por llegar a mi vida
+y por quedarte. Te quiero mucho.
+    </p>
+
+    <div class="playlist">
+      <h3>🎧 Canciones que te dedico</h3>
+      <ul>
+        <li>Jasmine — DPR LIVE</li>
+        <li>Sweet Child O' Mine — Guns N' Roses</li>
+        <li>So Fine — Guns N' Roses</li>
+        <li>Love, Maybe — MeloMance</li>
+        <li>This Side of Paradise — Coyote Theory</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function abrirCarta(){
+  document.getElementById("carta").style.display="block";
+  document.getElementById("musica").src =
+  "https://www.youtube.com/embed/VIDEO_ID?autoplay=1&loop=1&playlist=VIDEO_ID";
+}
+</script>
+
+</body>
+  </html>
